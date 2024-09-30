@@ -1,9 +1,9 @@
 <template>
     <div class="team-wrapper">
         <div class="team-list">
-            <v-carousel height="calc(100vh - 120px)" class="team-carousel" hide-delimiters>
+            <v-carousel v-if="members?.length > 0" height="calc(100vh - 120px)" class="team-carousel" hide-delimiters>
 
-                <v-carousel-item cover v-for="member in members">
+                <v-carousel-item cover v-for="member in members" :key="member.id">
                     <MemberCard :member="member"></MemberCard>
                 </v-carousel-item>
 
@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-    import { onMounted } from 'vue';
+    import { onMounted, ref } from 'vue';
     import { storeToRefs } from 'pinia';
 
     import { useBaseStore } from '../store/modules/base';

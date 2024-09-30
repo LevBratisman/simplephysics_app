@@ -62,10 +62,10 @@
         width: 500px;
         padding: 20px;
         border-radius: 10px;
+        white-space: normal;
     }
 
     .post-img {
-        height: 500px;
         width: 500px;
     }
 
@@ -80,6 +80,12 @@
 
     .dark {
         background-color: rgb(52, 51, 51);
+    }
+
+    @media (max-width: 800px) {
+        .post-block {
+            width: 350px;
+        }
     }
 
 </style>

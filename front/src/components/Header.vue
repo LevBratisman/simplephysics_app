@@ -1,9 +1,13 @@
 <template>
 
-    <v-app-bar elevation="12">
+    <v-app-bar elevation="8">
         
-            <v-app-bar-title>
+            <v-app-bar-title class="large-size">
                 {{ title }}
+            </v-app-bar-title>
+            <v-app-bar-title class="phone-size">
+                <img v-if="theme.global.name.value == 'light'" style="height: 100%; width: 120px; padding-top: 15px;" src="../../public/ava_dark.png"></img>
+                <img v-else style="height: 100%; width: 120px; padding-top: 15px;" src="../../public/ava_light.png"></img>
             </v-app-bar-title>
         
         <v-spacer></v-spacer>
@@ -46,6 +50,19 @@
     .main-link {
         text-decoration: none;
         transition: 0.3s;
+    }
+
+    .phone-size {
+        display: none;
+    }
+
+    @media (max-width: 500px) {
+        .phone-size {
+            display: block;
+        }
+        .large-size {
+            display: none;
+        }
     }
 
 </style>

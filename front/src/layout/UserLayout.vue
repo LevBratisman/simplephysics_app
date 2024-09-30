@@ -4,8 +4,8 @@
         <Header v-else title="SIMPLE PHYSICS"></Header>
 
         <div v-if="route.path == '/'" class="greeting-content">
-            <v-img v-if="theme.global.name.value == 'dark'" src="../../public/ava_light.png"></v-img>
-            <v-img v-else src="../../public/ava_dark.png"></v-img>
+            <img v-if="theme.global.name.value == 'dark'" src="../../public/ava_light.png"></img>
+            <img v-else src="../../public/ava_dark.png"></img>
             <div class="nav-arrow">
                 <v-icon icon="mdi-arrow-down-thick"></v-icon>
             </div>

@@ -1,62 +1,53 @@
 import { RouteRecordRaw } from 'vue-router';
-import TeamView from '../views/TeamView.vue'
-import AboutView from '../views/AboutView.vue'
-import NewsView from '../views/NewsView.vue';
-import AdminLayout from '../layout/AdminLayout.vue';
-import LoginView from '../views/admin/LoginView.vue';
-import PostView from '../views/admin/PostView.vue';
-import MemberView from '../views/admin/MemberView.vue';
-import UserLayout from '../layout/UserLayout.vue';
-import ResourcesView from '../views/ResourcesView.vue';
 
 
 const routes: RouteRecordRaw[] = [
     {
         name: 'Home',
         path: '/',
-        component: () => UserLayout,
+        component: () => import('../layout/UserLayout.vue'),
         children: [
             {
                 name: 'About',
                 path: '/about',
-                component: () => AboutView,
+                component: () => import('../views/AboutView.vue'),
             },
             {
                 name: 'Resources',
                 path: '/resources',
-                component: () => ResourcesView,
+                component: () => import('../views/ResourcesView.vue'),
             },
             {
                 name: 'Team',
                 path: '/team',
-                component: () => TeamView,
+                component: () => import('../views/TeamView.vue'),
             },
             {
                 name: 'News',
                 path: '/news',
-                component: () => NewsView,
+                component: () => import('../views/NewsView.vue'),
             },
         ]
     },
     {
         name: 'Admin-login',
         path: '/admin',
-        component: () => LoginView
+        component: () => import('../views/admin/LoginView.vue'),
     },
     {
         name: 'Admin-panel',
         path: '/admin/panel',
-        component: () => AdminLayout,
+        component: () => import('../layout/AdminLayout.vue'),
         children: [
             {
                 name: 'Posts',
                 path: 'posts',
-                component: () => PostView, 
+                component: () => import('../views/admin/PostView.vue'), 
             },
             {
                 name: 'Members',
                 path: 'members',
-                component: () => MemberView, 
+                component: () => import('../views/admin/MemberView.vue'), 
             }
         ]
     }

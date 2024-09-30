@@ -3,13 +3,13 @@
     <v-container v-if="theme.global.name.value == 'dark'" class="bg-image">
 
         <div class="introduce__content">
-            <h1 style="margin-bottom: 40px;">
+            <h1 class="content-title">
             SIMPLE PHYSICS
             </h1>
             <p style="margin-bottom: 15px;">
             Добро пожаловать! Перед вами проект Московского политехнического университета «Simple physics», 
             направленный на популяризацию физики среди широкой аудитории школьников и студентов. 
-            Физика окружает нас повсюду и влияет на нашу повседневную жизнь. 
+            <router-link :to="{ name: 'Admin-login' }">Ф</router-link>изика окружает нас повсюду и влияет на нашу повседневную жизнь. 
             </p>
             <p style="margin-bottom: 15px;">
             Мы уверены, что она намного интереснее, чем вы думаете, поэтому хотим показать вам это воочию. 
@@ -33,7 +33,7 @@
             <p style="margin-bottom: 15px;">
             Добро пожаловать! Перед вами проект Московского политехнического университета «Simple physics», 
             направленный на популяризацию физики среди широкой аудитории школьников и студентов. 
-            Физика окружает нас повсюду и влияет на нашу повседневную жизнь. 
+            <router-link :to="{ name: 'Admin-login' }">Ф</router-link>изика окружает нас повсюду и влияет на нашу повседневную жизнь. 
             </p>
             <p style="margin-bottom: 15px;">
             Мы уверены, что она намного интереснее, чем вы думаете, поэтому хотим показать вам это воочию. 
@@ -60,6 +60,11 @@
 
 <style scoped>
 
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
     @keyframes appear{
         0%{
             opacity:0;
@@ -79,7 +84,7 @@
         position: relative;
         background: 
         linear-gradient(rgba(0,0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
-        url('https://steamuserimages-a.akamaihd.net/ugc/711904814176955174/2717E1278F0BD7FB0B7D837D0DE3A6A11A3D96C0/?imw=512&amp;imh=320&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true');
+        url('../../public/back-dark-tablet.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -89,7 +94,7 @@
     .light {
         background: 
         linear-gradient(rgba(246, 245, 245, 0.7), rgba(241, 241, 241, 0.8)), 
-        url('https://opp.pasteurorg.ru/img/back/bg_17.jpg');
+        url('../../public/back-light-tablet.webp');
     }
 
     .introduce__content {
@@ -98,43 +103,47 @@
         padding: 50px 65px;
         max-width: 600px;
 
-        transform: scale(1.2);
+        transform: scale(0.8);
         animation: appear 1s 1;
         animation-fill-mode: forwards;
     }
 
-    @media (max-width: 1024px) {
-        .bg-image {
-            background: 
-            linear-gradient(rgba(0,0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
-            url(/background_tabletsize.jpeg);
-        }
-    }
-
     @media (max-width: 601px) {
         .introduce__content {
-            margin-left: 35px;
-            margin-right: 35px;
+            padding: 20px 20px;
+            font-size: 12px;
+        }
+
+        .content-title {
+            margin-bottom: 10px;
         }
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) and (max-height: 1000px) {
         .bg-image {
             background: 
             linear-gradient(rgba(0,0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
-            url(/background_smallsize.jpeg);
+            url('../../public/back-dark-phone.jpg');
+        }
+        .light {
+            background: 
+            linear-gradient(rgba(246, 245, 245, 0.7), rgba(241, 241, 241, 0.8)), 
+            url('../../public/back-light-pc.jpg');
         }
     }
 
-    @media (max-width: 360px) {
-        .bio {
-            width: 250px;
+    @media (min-height: 890px) {
+        .introduce__content {
+            font-size: 16px;
         }
+    }
 
-        .bg-image {
-            background: 
-            linear-gradient(rgba(0,0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
-            url(`/background_smallsize.jpeg);
+    @media (min-height: 1000px) {
+        .introduce__content {
+            font-size: 20px;
+        }
+        .content-title {
+            margin-bottom: 25px;
         }
     }
 

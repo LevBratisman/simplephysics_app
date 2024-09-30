@@ -22,7 +22,7 @@ app.include_router(app_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.BACKEND_CORS_ORIGINS],
+    allow_origins=[*settings.BACKEND_CORS_ORIGINS.split(",")],
     allow_credentials=True,
     allow_methods=['GET', 'POST', 'PATCH', 'DELETE'],
     allow_headers=['*']

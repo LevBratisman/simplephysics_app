@@ -38,7 +38,7 @@
     const submitForm = () => {
         if (!form.value) return;
 
-        if (login.value == 'admin' && password.value == 'admin') {
+        if (login.value == 'admin' && password.value == 'admin321') {
             baseStore.setAdminAccessToken();
             router.push({name: 'Admin-panel'});
         }

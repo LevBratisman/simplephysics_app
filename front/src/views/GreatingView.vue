@@ -1,7 +1,7 @@
 <template>
     <div class="greeting-content">
-        <v-img v-if="theme.global.name.value == 'dark'" src="../../public/ava_light.png"></v-img>
-        <v-img v-else src="../../public/ava_dark.png"></v-img>
+        <v-img v-if="theme.global.name.value == 'dark'" :src="require('@/ava_light.png')"></v-img>
+        <v-img v-else :src="require('@/ava_dark.png')"></v-img>
         <div class="nav-arrow">
             <v-icon icon="mdi-arrow-down-thick"></v-icon>
         </div>

@@ -29,13 +29,12 @@ export const useBaseStore = defineStore('base-store', {
         },
 
         setAdminAccessToken() {
-            const lifeTerm = 10;
+            const lifeTerm = 2400;
             document.cookie = `admin_access_token=${uuidv4()}; max-age=${lifeTerm}`;
             this.adminAccessToken = true;
         },
 
         getAdminAccessToken() {
-            console.log(document.cookie);
             if (document.cookie) {
                 this.adminAccessToken = true;
             } else {
