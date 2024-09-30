@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const apiUrl = `https://simplephysics.ru/api`;
+export const apiUrl = "https://simplephysics.ru/api";
 
 axios.defaults.withCredentials = true;
 

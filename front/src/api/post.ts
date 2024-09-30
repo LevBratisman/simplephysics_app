@@ -9,15 +9,15 @@ export const postApi = {
     },
 
     async addPost(item: IPostAdd) {
-        await axios.post(`${apiUrl}/posts/`, item);
+        await axios.post(`${apiUrl}/posts`, item);
     },
 
     async updatePost(item: IPostUpdate) {
-        await axios.patch(`${apiUrl}/posts/`, item);
+        await axios.patch(`${apiUrl}/posts`, item);
     },
 
     async deletePost(itemId: number) {
-        await axios.delete(`${apiUrl}/posts/${itemId}/`);
+        await axios.delete(`${apiUrl}/posts/${itemId}`);
     },
 
     async getPostImage(uuid: string | null) {
