@@ -4,8 +4,8 @@
         <Header v-else title="SIMPLE PHYSICS"></Header>
 
         <div v-if="route.path == '/'" class="greeting-content">
-            <img v-if="theme.global.name.value == 'dark'" src="../../public/ava_light.png"></img>
-            <img v-else src="../../public/ava_dark.png"></img>
+            <img v-if="theme.global.name.value == 'dark'" class="img" src="../../public/ava_light.png"></img>
+            <img v-else class="img" src="../../public/ava_dark.png"></img>
             <div class="nav-arrow">
                 <v-icon icon="mdi-arrow-down-thick"></v-icon>
             </div>
@@ -127,6 +127,15 @@
         opacity: 0;
         animation: navbar-show 1s 1s 1;
         animation-fill-mode: forwards;
+    }
+
+    .img { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
 </style>

@@ -27,7 +27,7 @@
     <v-container v-else class="bg-image light">
         
         <div class="introduce__content">
-            <h1 style="margin-bottom: 40px;">
+            <h1 style="margin-bottom: 15px;">
             SIMPLE PHYSICS
             </h1>
             <p style="margin-bottom: 15px;">
