@@ -52,7 +52,10 @@ class MemberAPI:
 
         if member.image_id and data.image_id and (member.image_id != data.image_id):
             image_path = Path(f"app/static/images/member/{member.image_id}.webp")
-            os.remove(path=image_path)
+            try:
+                os.remove(path=image_path)
+            except FileNotFoundError:
+                pass
 
         await MemberRepository.update(data=data.to_dict())
         return 'UPDATED'
@@ -64,7 +67,10 @@ class MemberAPI:
 
         if member.image_id:
             image_path = Path(f"app/static/images/member/{member.image_id}.webp")
-            os.remove(path=image_path)
+            try:
+                os.remove(path=image_path)
+            except FileNotFoundError:
+                pass
 
         await MemberRepository.delete(instance_id=instance_id)
         return 'DELETED'

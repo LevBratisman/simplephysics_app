@@ -52,7 +52,10 @@ class PostAPI:
 
         if post.image_id and data.image_id and (post.image_id != data.image_id):
             image_path = Path(f"app/static/images/post/{post.image_id}.webp")
-            os.remove(path=image_path)
+            try:
+                os.remove(path=image_path)
+            except FileNotFoundError:
+                pass
 
         await PostRepository.update(data=data.to_dict())
         return 'UPDATED'
@@ -64,7 +67,10 @@ class PostAPI:
 
         if post.image_id:
             image_path = Path(f"app/static/images/post/{post.image_id}.webp")
-            os.remove(path=image_path)
+            try:
+                os.remove(path=image_path)
+            except FileNotFoundError:
+                pass
 
         await PostRepository.delete(instance_id=instance_id)
         return 'DELETED'
