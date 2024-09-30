@@ -9,15 +9,15 @@ export const memberApi = {
     },
 
     async addMember(item: IMemberAdd) {
-        await axios.post(`${apiUrl}/members/`, item);
+        await axios.post(`${apiUrl}/members`, item);
     },
 
     async updateMember(item: IMemberUpdate) {
-        await axios.patch(`${apiUrl}/members/`, item);
+        await axios.patch(`${apiUrl}/members`, item);
     },
 
     async deleteMember(itemId: number) {
-        await axios.delete(`${apiUrl}/members/${itemId}/`);
+        await axios.delete(`${apiUrl}/members/${itemId}`);
     },
 
     async getMemberImage(uuid: string) {
