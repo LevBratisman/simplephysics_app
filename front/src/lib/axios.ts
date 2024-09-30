@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const apiUrl = `http://0.0.0.0:8000`;
+export const apiUrl = `https://0.0.0.0:8000`;
 
 axios.defaults.withCredentials = true;
 

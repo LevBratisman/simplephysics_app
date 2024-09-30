@@ -6,9 +6,9 @@
         <div v-if="route.path == '/'" class="greeting-content">
             <img v-if="theme.global.name.value == 'dark'" class="img" src="../../public/ava_light.png"></img>
             <img v-else class="img" src="../../public/ava_dark.png"></img>
-            <!-- <div class="nav-arrow">
+            <div class="nav-arrow">
                 <v-icon icon="mdi-arrow-down-thick"></v-icon>
-            </div> -->
+            </div>
         </div>
 
         <div v-if="route.path == '/'" class="user-layout-navbar">
