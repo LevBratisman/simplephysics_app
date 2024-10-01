@@ -272,4 +272,30 @@
         }
     }
 
+    @media (max-height: 700px) {
+        .link-block {
+            height: 90px;
+            width: 90px;
+            font-size: 30px;
+        }
+
+        .resources-block {
+            display: flex;
+            gap: 10px;
+        }
+
+        .telegram-block {
+            height: 90px;
+            width: 190px;
+        }
+
+        .flex-double-block {
+            gap: 10px;
+        }
+
+        .nav-tip {
+            display: none;
+        }
+    }
+
 </style>

@@ -147,4 +147,11 @@
         }
     }
 
+    @media (max-height: 600px) {
+        .introduce__content {
+            padding: 20px 20px;
+            font-size: 10px;
+        }
+    }
+
 </style>

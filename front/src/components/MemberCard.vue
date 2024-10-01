@@ -3,7 +3,7 @@
         <v-img class="member-img" :src="memberImageUrl" alt=""></v-img>
         <div class="member-info-content">
             <h1>{{ member.name }}</h1>
-            <h3 style="margin-bottom: 20px;">{{ member.role }}</h3>
+            <h3 style="margin-bottom: 10px;">{{ member.role }}</h3>
             <p>{{ member.classYear }}</p>
             <p>{{ member.faculty }}</p>
             <p>{{ member.major }}</p>
@@ -106,6 +106,22 @@
         }
         .member-img {
             height: 45vh;
+            width: 500px;
+        }
+    }
+
+    @media (max-height: 800px) {
+        .member-info-content {
+            max-width: 300px;
+            font-size: 12px;
+        }
+
+        .member-info-block {
+            flex-direction: column;
+            padding: 0 30px;
+        }
+        .member-img {
+            height: 40vh;
             width: 500px;
         }
     }
