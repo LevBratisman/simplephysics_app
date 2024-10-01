@@ -53,7 +53,7 @@
         }
     }
 
-    @keyframes navbar-show{
+    /* @keyframes navbar-show{
         0%{
             transform: translateY(100px);
         }
@@ -61,7 +61,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-    }
+    } */
 
     @keyframes arrow-nav{
         0% {
@@ -123,11 +123,11 @@
         animation-fill-mode: forwards;
     }
 
-    .navbar {
+    /* .navbar {
         opacity: 0;
         animation: navbar-show 1s 1s 1;
         animation-fill-mode: forwards;
-    }
+    } */
 
     .img { 
         position: absolute;
