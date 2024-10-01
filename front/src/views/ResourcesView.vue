@@ -94,7 +94,7 @@
         }
         100% {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
     }
 
@@ -219,7 +219,7 @@
 
         animation: youtube-show 1s 0.2s 1;
         animation-fill-mode: forwards;
-        transform: translateY(150px);
+        transform: translateX(-150px);
     }
 
     .rutube-block {
@@ -270,6 +270,7 @@
             height: 180px;
             width: 380px;
         }
+
     }
 
     @media (max-height: 700px) {

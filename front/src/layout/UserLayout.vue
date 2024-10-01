@@ -11,9 +11,6 @@
             </div>
         </div>
 
-        <div v-if="route.path == '/'" class="user-layout-navbar">
-            <NavBar class="navbar"></NavBar>
-        </div>
         <div v-else class="user-layout-navbar">
             <NavBar></NavBar>
         </div>
@@ -53,15 +50,6 @@
         }
     }
 
-    /* @keyframes navbar-show{
-        0%{
-            transform: translateY(100px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    } */
 
     @keyframes arrow-nav{
         0% {
@@ -122,12 +110,6 @@
         animation: header-show 1s 1s 1;
         animation-fill-mode: forwards;
     }
-
-    /* .navbar {
-        opacity: 0;
-        animation: navbar-show 1s 1s 1;
-        animation-fill-mode: forwards;
-    } */
 
     .img { 
         position: absolute;
