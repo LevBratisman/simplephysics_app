@@ -1,6 +1,6 @@
 <template>
-    <div class="member-info-block">
-        <v-img v-if="memberImageUrl" class="member-img" :src="memberImageUrl" alt=""></v-img>
+    <div v-if="memberImageUrl" class="member-info-block">
+        <v-img class="member-img" :src="memberImageUrl" alt=""></v-img>
         <div class="member-info-content">
             <h1>{{ member.name }}</h1>
             <h3 style="margin-bottom: 20px;">{{ member.role }}</h3>
