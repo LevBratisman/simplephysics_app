@@ -7,25 +7,25 @@
           color="teal"
           grow
         >
-            <v-btn to="/about">
+            <v-btn to="/about" :ripple="false">
                 <v-icon>mdi-home</v-icon>
         
                 О проекте
             </v-btn>
 
-            <v-btn to="/resources">
+            <v-btn to="/resources" :ripple="false">
                 <v-icon>mdi-atom</v-icon>
         
                 Ресурсы
             </v-btn>
       
-            <v-btn to="/team">
+            <v-btn to="/team" :ripple="false">
                 <v-icon>mdi-account-group-outline</v-icon>
         
                 Команда
             </v-btn>
       
-            <v-btn to="/news">
+            <v-btn to="/news" :ripple="false">
                 <v-icon>mdi-new-box</v-icon>
         
                 Новости
