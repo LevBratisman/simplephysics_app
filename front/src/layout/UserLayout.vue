@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div v-else class="user-layout-navbar">
+        <div class="user-layout-navbar">
             <NavBar></NavBar>
         </div>
     </div>
