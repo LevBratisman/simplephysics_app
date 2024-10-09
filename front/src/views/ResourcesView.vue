@@ -31,7 +31,7 @@
                         <v-icon v-else class="link-dark" icon="mdi-youtube"></v-icon>
                     </div>
                 </a>
-                <a href="https://t.me/simplephysicsbot" target=»_blank>
+                <a href="https://rutube.ru/channel/43627801/shorts/" target=»_blank>
                     <div class="link-block rutube-block">
                         <v-icon v-if="theme.global.name.value == 'light'" icon="mdi-alpha-r-box"></v-icon>
                         <v-icon v-else class="link-dark" icon="mdi-alpha-r-box"></v-icon>
@@ -64,17 +64,8 @@
         0% {
             opacity: 0;
         }
-        80% {
-            opacity: 1;
-            transform: translateY(-20px);
-        }
-        80% {
-            opacity: 1;
-            transform: translateY(10px);
-        }
         100% {
             opacity: 1;
-            transform: translateY(0);
         }
     }
 
@@ -84,7 +75,6 @@
         }
         100% {
             opacity: 1;
-            transform: translateX(0);
         }
     }
 
@@ -94,7 +84,6 @@
         }
         100% {
             opacity: 1;
-            transform: translateX(0);
         }
     }
 
@@ -104,7 +93,6 @@
         }
         100% {
             opacity: 1;
-            transform: translateX(0);
         }
     }
 
@@ -114,7 +102,6 @@
         }
         100% {
             opacity: 1;
-            transform: translateX(0);
         }
     }
 
@@ -124,7 +111,6 @@
         }
         100% {
             opacity: 0.5;
-            transform: translateY(0);
         }
     }
 
@@ -195,9 +181,9 @@
         background-color: rgb(107, 147, 249);
         opacity: 0;
 
-        animation: telegram-show 1s 0.8s 1;
+
+        animation: telegram-show 1s 1;
         animation-fill-mode: forwards;
-        transform: translateY(-150px);
     }
 
     .telegram-block:hover {
@@ -208,27 +194,27 @@
         background-color: rgb(126, 189, 251);
         opacity: 0;
 
-        animation: vk-group-show 1s 0.6s 1;
+
+        animation: vk-group-show 1s 1;
         animation-fill-mode: forwards;
-        transform: translateX(150px);
     }
 
     .youtube-block {
         background-color: rgb(251, 126, 126);
         opacity: 0;
 
-        animation: youtube-show 1s 0.2s 1;
+
+        animation: youtube-show 1s 1;
         animation-fill-mode: forwards;
-        transform: translateX(-150px);
     }
 
     .rutube-block {
         background-color: rgb(60, 80, 131);
         opacity: 0;
 
-        animation: rutube-show 1s 0.4s 1;
+
+        animation: rutube-show 1s 1;
         animation-fill-mode: forwards;
-        transform: translateX(150px);
     }
 
     .telegram-bot-block {
@@ -237,7 +223,6 @@
 
         animation: telegram-bot-show 1s 1;
         animation-fill-mode: forwards;
-        transform: translateX(-150px);
     }
 
     .nav-tip {
@@ -249,15 +234,14 @@
 
     .nav-tip-title {
         opacity: 0;
-        transform: translateY(10px);
-        animation: nav-title-show 1s 1.2s 1;
+        animation: nav-title-show 1s 0.4s 1;
         animation-fill-mode: forwards;
     }
 
     .nav-tip-arrow {
         opacity: 0;
         transform: translateY(10px);
-        animation: nav-arrow-show 2s 1.8s infinite;
+        animation: nav-arrow-show 2s 0.6s infinite;
     }
 
     @media (min-height: 1000px) {
