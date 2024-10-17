@@ -7,7 +7,7 @@
             </v-btn>
         </div>
         
-        <v-table>
+        <v-table fixed-header height="100vh">
             <thead>
                 <tr>
                     <th 
