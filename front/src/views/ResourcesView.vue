@@ -5,8 +5,8 @@
             <div class="flex-double-block">
                 <a href="https://t.me/simplephysics_polyteh" target=»_blank>
                     <div class="telegram-block">
-                        <v-img v-if="theme.global.name.value == 'light'" src="https://www.svgrepo.com/show/342287/telegram-plane.svg"></v-img>
-                        <v-img v-else src="https://static.tildacdn.com/tild3838-3438-4465-b138-313631616236/Mask_group3_1.png"></v-img>
+                        <v-img v-if="theme.global.name.value == 'light'" src="tg_icon.svg"></v-img>
+                        <v-img v-else src="tg_icon_white.png"></v-img>
                     </div>
                 </a>
             </div>
@@ -19,8 +19,8 @@
                 </a>
                 <a href="https://vk.com/simplephysicsmp" target=»_blank>
                     <div class="link-block vk-group-block">
-                        <v-img v-if="theme.global.name.value == 'light'" src="https://imedix.ru/wp-content/uploads/2023/04/vk5.png"></v-img>
-                        <v-img v-else src="https://static.tildacdn.com/tild6332-3432-4165-b161-343232393830/vk_white.png"></v-img>
+                        <v-img v-if="theme.global.name.value == 'light'" src="vk_icon.png"></v-img>
+                        <v-img v-else src="vk_icon_white.png"></v-img>
                     </div>
                 </a>
             </div>
