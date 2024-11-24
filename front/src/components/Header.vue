@@ -6,15 +6,15 @@
                 {{ title }}
             </v-app-bar-title>
             <v-app-bar-title class="phone-size">
-                <img v-if="theme.global.name.value == 'light'" style="height: 100%; width: 120px; padding-top: 15px;" src="../../public/ava_dark.png"></img>
-                <img v-else style="height: 100%; width: 120px; padding-top: 15px;" src="../../public/ava_light.png"></img>
+                <img v-show="theme.global.name.value == 'light'" style="height: 100%; width: 120px; padding-top: 15px;" src="../../public/ava_dark.png"></img>
+                <img v-show="theme.global.name.value == 'dark'" style="height: 100%; width: 120px; padding-top: 15px;" src="../../public/ava_light.png"></img>
             </v-app-bar-title>
         
         <v-spacer></v-spacer>
 
         <div class="theme-switcher-block">
-            <v-btn v-if="theme.global.name.value=='light'" class="theme-switcher" @click="toggleTheme" icon="mdi-weather-sunny"></v-btn>
-            <v-btn v-else class="theme-switcher" @click="toggleTheme" icon="mdi-weather-night"></v-btn>
+            <v-btn v-show="theme.global.name.value=='light'" :ripple="false" class="theme-switcher" @click="toggleTheme" icon="mdi-weather-sunny"></v-btn>
+            <v-btn v-show="theme.global.name.value=='dark'" :ripple="false" class="theme-switcher" @click="toggleTheme" icon="mdi-weather-night"></v-btn>
         </div>
 
     </v-app-bar>
