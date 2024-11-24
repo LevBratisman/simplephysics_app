@@ -83,18 +83,6 @@
         }
     }
 
-    @media (max-width: 500px) and (max-height: 1000px) {
-        .bg-image {
-            background: 
-            linear-gradient(rgba(0,0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
-            url('../../public/back-dark-phone.jpg');
-        }
-        .light {
-            background: 
-            linear-gradient(rgba(246, 245, 245, 0.7), rgba(241, 241, 241, 0.8)), 
-            url('../../public/back-light-pc.jpg');
-        }
-    }
 
     @media (min-height: 890px) {
         .introduce__content {
