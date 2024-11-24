@@ -11,9 +11,9 @@ from app.config import settings
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
-    print('Application is launched!')
+    print("Application is launched!")
     yield
-    print('Application is finished!')
+    print("Application is finished!")
 
 
 app = FastAPI(lifespan=lifespan)
@@ -24,9 +24,10 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[*settings.BACKEND_CORS_ORIGINS.split(",")],
     allow_credentials=True,
-    allow_methods=['GET', 'POST', 'PATCH', 'DELETE'],
-    allow_headers=['*']
+    allow_methods=["GET", "POST", "PATCH", "DELETE"],
+    allow_headers=["*"],
 )
+
 
 def main():
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

@@ -5,14 +5,17 @@ import { BaseState } from '../types';
 
 import { postApi } from '../../api/post';
 import { memberApi } from '../../api/member';
+import { dateApi } from '../../api/date';
 
 import { IPost, IPostUpdate, IPostAdd } from '../../interfaces/PostInterface';
 import { IMember, IMemberAdd, IMemberUpdate } from '../../interfaces/MemberInterface';
+import { IDate, IDateAdd, IDateUpdate } from '../../interfaces/DateInterface';
 
 
 const defaultState: BaseState = {
     posts: [],
     members: [],
+    dates: [],
     theme: 'light',
     adminAccessToken: false,
 };
@@ -120,6 +123,40 @@ export const useBaseStore = defineStore('base-store', {
         async getMemberImage(uuid: string) {
             try {
                 return await memberApi.getMemberImage(uuid);
+            } catch (err) {
+                console.debug(err);
+            }
+        },
+
+        // Dates
+        async getDates() {
+            try {
+                const response = await dateApi.getDates();
+                this.dates = response.data;
+            } catch (err) {
+                console.debug(err);
+            }
+        },
+        async addDate(item: IDateAdd) {
+            try {
+                await dateApi.addDate(item);
+                await this.getDates();
+            } catch (err) {
+                return err;
+            }
+        },
+        async updateDate(item: IDateUpdate) {
+            try {
+                await dateApi.updateDate(item);
+                await this.getDates();
+            } catch (err) {
+                return err;
+            }
+        },
+        async deleteDate(itemId: number) {
+            try {
+                await dateApi.deleteDate(itemId);
+                await this.getDates();
             } catch (err) {
                 console.debug(err);
             }

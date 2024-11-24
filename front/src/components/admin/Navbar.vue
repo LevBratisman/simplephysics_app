@@ -43,6 +43,11 @@
             title: 'Участники',
             route: 'Members',
         },
+        {
+            icon: 'mdi-calendar',
+            title: 'Даты',
+            route: 'Dates',
+        },
     ]
 
 </script>

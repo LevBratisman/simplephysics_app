@@ -7,6 +7,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
 import { createPinia } from 'pinia'
+import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
 
@@ -20,4 +21,4 @@ const vuetify = createVuetify({
 
 const pinia = createPinia()
 
-createApp(App).use(router).use(vuetify).use(pinia).mount('#app')
+createApp(App).use(router).use(autoAnimatePlugin).use(vuetify).use(pinia).mount('#app')

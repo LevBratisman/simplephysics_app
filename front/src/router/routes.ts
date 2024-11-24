@@ -27,6 +27,11 @@ const routes: RouteRecordRaw[] = [
                 path: '/news',
                 component: () => import('../views/NewsView.vue'),
             },
+            {
+                name: 'Calendar',
+                path: '/calendar',
+                component: () => import('../views/CalendarView.vue'),
+            },
         ]
     },
     {
@@ -48,6 +53,11 @@ const routes: RouteRecordRaw[] = [
                 name: 'Members',
                 path: 'members',
                 component: () => import('../views/admin/MemberView.vue'), 
+            },
+            {
+                name: 'Dates',
+                path: 'dates',
+                component: () => import('../views/admin/DateView.vue'), 
             }
         ]
     }

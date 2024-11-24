@@ -1,9 +1,9 @@
 <template>
     <div class="news-wrapper">
-        <div v-if="posts?.length > 0" class="news-list">
+        <div v-if="posts?.length > 0" class="news-list" v-auto-animate>
             <PostCard v-for="post in posts" :post="post"></PostCard>
         </div>
-        <div v-else class="lack-content">
+        <div v-else class="lack-content" v-auto-animate>
             <h2>
                 Нет новостей
             </h2>

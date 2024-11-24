@@ -9,26 +9,27 @@
         >
             <v-btn to="/about" :ripple="false">
                 <v-icon>mdi-home</v-icon>
-        
-                О проекте
+                <span class="nav-btn-text">О проекте</span>
             </v-btn>
 
             <v-btn to="/resources" :ripple="false">
                 <v-icon>mdi-atom</v-icon>
-        
-                Ресурсы
+                <span class="nav-btn-text">Ресурсы</span>
             </v-btn>
       
             <v-btn to="/team" :ripple="false">
                 <v-icon>mdi-account-group-outline</v-icon>
-        
-                Команда
+                <span class="nav-btn-text">Команда</span>
+            </v-btn>
+
+            <v-btn to="/calendar" :ripple="false">
+                <v-icon>mdi-calendar</v-icon>
+                <span class="nav-btn-text">Календарь</span>
             </v-btn>
       
             <v-btn to="/news" :ripple="false">
                 <v-icon>mdi-new-box</v-icon>
-        
-                Новости
+                <span class="nav-btn-text">Новости</span>
             </v-btn>
         </v-bottom-navigation>
         <v-main>
@@ -44,5 +45,11 @@
 </script>
 
 <style scoped>
+
+    @media screen and (max-width: 600px) {
+        .nav-btn-text {
+            display: none !important
+        }
+    }
 
 </style>
