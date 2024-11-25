@@ -65,11 +65,11 @@
     }
 
     .calendar-panel-block-type-birthday {
-        background-color: #ff8c61;
+        background-color: #5b7fff;
     }
 
     .calendar-panel-block-type-award {
-        background-color: #7bc950;
+        background-color: #5b7fff;
     }
 
     .calendar-panel-block-type-discovery {

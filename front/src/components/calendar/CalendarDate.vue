@@ -118,7 +118,7 @@
     }
 
     .calendar-date-birthday {
-        background-color: #ff8c61;
+        background-color: #5b7fff;
         color: white;
         font-weight: bold;
         border-radius: 50%;
@@ -140,7 +140,7 @@
     }
 
     .calendar-date-award {
-        background-color: #7bc950;
+        background-color: #5b7fff;
         color: white;
         font-weight: bold;
         border-radius: 50%;
